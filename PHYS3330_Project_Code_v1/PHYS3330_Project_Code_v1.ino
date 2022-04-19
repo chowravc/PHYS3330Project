@@ -14,6 +14,7 @@ int passDig3;
 // Runs at the start of the code
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
+  Serial.begin(9600);
 }
 
 // Repeats every few milliseconds
@@ -26,6 +27,10 @@ void loop() {
   passDig1 = analogRead(passPin1);
   passDig2 = analogRead(passPin2);
   passDig3 = analogRead(passPin3);
+  Serial.println(passDig1);
+  Serial.println(passDig1);
+  Serial.println(passDig1);
+  Serial.println('------');
 
   // If the value is below 200 (1.0 V) for all three pins
   if (passDig1 < 200 && passDig2 < 200 && passDig3 < 200) {
