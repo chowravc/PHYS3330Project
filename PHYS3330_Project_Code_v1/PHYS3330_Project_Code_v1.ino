@@ -1,6 +1,9 @@
 // Delay period before every iteration
 int delayPeriod = 100;
 
+// Threshold value for password
+int passThresh = 200;
+
 // Digital output pins being used for outputs
 int passLED = 10;
 
@@ -31,18 +34,13 @@ void loop() {
   passDig1 = analogRead(passPin1);
   passDig2 = analogRead(passPin2);
   passDig3 = analogRead(passPin3);
-  
-  Serial.println(passDig1);
-  Serial.println(passDig1);
-  Serial.println(passDig1);
-  Serial.println('------');
 
-  // If the value is below 200 (1.0 V) for all three pins
-  if (passDig1 < 200 && passDig2 < 200 && passDig3 < 200) {
+  // If the value is below passThresh for all three pins
+  if (passDig1 < passThresh && passDig2 < passThresh && passDig3 < passThresh) {
     // Turn on the on-board LED
     digitalWrite(passLED, HIGH);
   }
-  // If the value is above 200 (1.0 V) for any of the three pins
+  // If the value is above passThresh for any of the three pins
   else{
     // Turn off the on-board LED
     digitalWrite(passLED, LOW);
