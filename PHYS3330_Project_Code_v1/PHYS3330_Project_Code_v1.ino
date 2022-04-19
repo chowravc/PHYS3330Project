@@ -6,6 +6,11 @@ int passPin1 = A1;
 int passPin2 = A2;
 int passPin3 = A3;
 
+// Integers to store read values from analog pins
+int passDig1;
+int passDig2;
+int passDig3;
+
 // Runs at the start of the code
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
