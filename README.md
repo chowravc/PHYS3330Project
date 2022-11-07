@@ -5,3 +5,5 @@ This is the code that allows the safety box to function. It consists of three pa
 1. Potentiometer Password
 2. Laser cage controller
 3. Alarm system
+
+![Fig. 1: ](/pictures/latest.png)
